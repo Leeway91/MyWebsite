@@ -1,0 +1,38 @@
+:root {
+  --h1-fontsize: 20px;
+}
+
+body {
+  background-color: lightyellow;
+  padding: 15px;
+}
+
+h1 {
+  color: maroon;
+  font-size: var(--h1-fontsize, 20px);
+}
+
+h1:hover {
+  color: blue;
+  font-size: (calc(var(--h1-fontsize,20px) + 5px));
+  font-weight: bold;
+  border-color: red;
+  border: 5px;
+}
+
+button {
+  border-radius: 10px;
+  color: darkblue;
+}
+button:hover {
+  color: blue;
+}
+button:active {
+  color: skyblue;
+}
+
+
+* {
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}

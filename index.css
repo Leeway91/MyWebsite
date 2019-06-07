@@ -1,11 +1,102 @@
 :root {
-  --h1-fontsize: 20px;
+  /* COLOR DEFINITIONS: */
+  --darkest-color: #402214;
+  --dark-color: #804328;
+  --main-color:#BF653B;
+  --light-color: #E67947;
+  --lightest-color:#FF8850;
+  /* FONT DEFINITIONS */
+  --main-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --h1-fontsize: 20px; 
+  /* FORMATTING */
+  --button-border-rad: 5px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
 }
 
 body {
-  background-color: lightyellow;
-  padding: 15px;
+  background-image: url(img/bg/tausta_1.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position-y: 70px;
+  /*background-color: var(--body-bg-color, lightyellow);*/
+  font-family: var(--main-font);
+  color: var(--light-color, lightgray);
+  /*padding: 15px;*/
+  transition-timing-function: ease-out;
+  transition-duration: 800ms;
 }
+
+.content {
+  background: #804328;
+  margin: 350px 0px;
+  padding: 10px 20px;
+}
+
+nav {
+  background-color: var(--darkest-color, black);
+  width: 100%;
+  height: 50px;
+}
+
+/*website name */
+nav p {
+  display: block;
+  color: var(--main-color, gray);
+  font-size: 24px;
+  line-height: 50px;
+  float: left;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: block;
+}
+
+nav ul li {
+  background-color: var(--dark-color, darkblue);
+  display: inline-block;
+  list-style-type: none; /* no bullets */
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  float: left;
+}
+nav ul li:hover {
+  background-color: var(--lightest-color, cyan);
+}
+nav ul li a {
+  background-color: var(--dark-color, darkblue);
+  color: var(--darkest-color, black);
+  line-height: 45px;
+  float: left;
+  margin-top: 5px;
+  padding: 0 20px;
+}
+
+/*Sub-menu*/
+nav ul li ul{
+  position: absolute;
+  padding-left: 0px;
+  margin-left: -5px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+/*sub-menu item*/
+nav ul li ul li {
+  display: none;
+  background: none;
+  overflow: hidden;
+}
+nav ul li:hover ul li{
+  display: block;
+} 
+
 
 h1 {
   color: maroon;
@@ -14,25 +105,19 @@ h1 {
 
 h1:hover {
   color: blue;
-  font-size: (calc(var(--h1-fontsize,20px) + 5px));
-  font-weight: bold;
-  border-color: red;
-  border: 5px;
+  font-size: calc(var(--h1-fontsize, 20px) + 2px);
+  font-weight: bolder;
 }
 
 button {
-  border-radius: 10px;
+  border-radius: var(--button-border-rad, 5px);
   color: darkblue;
 }
 button:hover {
-  color: blue;
+  color: darkgreen;
+  font-style: italic;
 }
 button:active {
   color: skyblue;
 }
 
-
-* {
-  transition-timing-function: ease-in;
-  transition-duration: 200ms;
-}

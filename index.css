@@ -1,10 +1,12 @@
 :root {
   /* COLOR DEFINITIONS: */
-  --darkest-color: #090942;
-  --dark-color: #121280;
-  --main-color:#2020E6;
-  --light-color: #C2AF20;
-  --lightest-color:#FFED63;
+  --darkest-color: #402214;
+  --dark-color: #804328;
+  --main-color:#BF653B;
+  --light-color: #E67947;
+  --lightest-color:#FF8850;
+
+  --float-dark-to-light: linear-gradient(90,--lightest-color, --darkest-color);
   /* FONT DEFINITIONS */
   --main-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   --h1-fontsize: 20px; 
@@ -20,14 +22,16 @@
 }
 
 body {
-  background-image: url(img/bg/tausta_1.jpg);
-  background-size: 100% auto;
+  /* background-image: url(img/bg/tausta_1.jpg);  */
+  background-image: linear-gradient(90, #fff, #000);
+  /* background-color: var(--darkest-color, black); */
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position-y: 70px;
+  background-position-y: 30px;
   /*background-color: var(--body-bg-color, lightyellow);*/
   font-family: var(--main-font);
   color: var(--light-color, lightgray);
-  /*padding: 15px;*/
+  /* padding: 15px; */
   transition-timing-function: ease-out;
   transition-duration: 800ms;
 }
